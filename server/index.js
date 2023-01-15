@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const Octokit = require("octokit");
 const api = require("./routes/api");
-
+const PORT = process.env.PORT || 5000;
 const cors = require("cors");
 
 // app.use(bodyParser.json());
@@ -34,6 +34,6 @@ app.get("/", function (req, res) {
 });
 
 // replace 3000 with (process.env.PORT)
-app.listen(5000, function () {
+app.listen(PORT, function () {
   console.log("Server is listening");
 });
